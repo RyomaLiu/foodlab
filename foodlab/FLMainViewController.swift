@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FLMainViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class FLMainViewController: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
     var menu:LMCPopoverMenuView?
     var menuItems:Array<Any>!
@@ -19,8 +19,8 @@ class FLMainViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         //主页面标题
         self.title = LocalString("app_main_title")
         
-        self.navigationController?.navigationBar.barTintColor = UIColor.white
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage.imageWith(color: UIColor.init(red: 246.0/255, green: 247.0/255, blue: 249.0/255, alpha: 1.0), size: CGSize(width: 1, height: 1)), for: .default)
+        self.navigationController?.navigationBar.titleTextAttributes = NSDictionary(dictionaryLiteral: (NSForegroundColorAttributeName,#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1))) as? [String : Any]
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage.imageWith(color:#colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1), size: CGSize(width: 1, height: 1)), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         
         //右上角菜单
@@ -71,6 +71,12 @@ class FLMainViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         
         
         // Do any additional setup after loading the view.
+        
+        setNeedsStatusBarAppearanceUpdate()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     @objc private func openMenu(sender:UIBarButtonItem){
@@ -151,6 +157,7 @@ class FLMainViewController: UIViewController,UIImagePickerControllerDelegate,UIN
         btnCancel.center = CGPoint(x: 40, y: btnTake.center.y)
         overlay.addSubview(btnCancel)
 
+        
         
         btnCancel.addTarget(self, action: #selector(closeCamera), for: .touchUpInside)
         

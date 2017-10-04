@@ -23,6 +23,7 @@
 		5440EBBB1F7D55DD0084751C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5440EBBD1F7D55DD0084751C /* Localizable.strings */; };
 		5440EBC01F7D56030084751C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5440EBC21F7D56030084751C /* InfoPlist.strings */; };
 		548271EB1F7D56F800797759 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 548271ED1F7D56F800797759 /* LaunchScreen.storyboard */; };
+		548272161F854A6600797759 /* AutoGenStrings.py in Resources */ = {isa = PBXBuildFile; fileRef = 548272151F854A6600797759 /* AutoGenStrings.py */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,9 +70,10 @@
 		5440EBC31F7D56060084751C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5440EBC41F7D56080084751C /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		548271EC1F7D56F800797759 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		548271EF1F7D56FC00797759 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
-		548271F11F7D56FF00797759 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
-		548271F51F7D582500797759 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5482720D1F853DFD00797759 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5482720F1F853E0100797759 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		548272131F853E6900797759 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		548272151F854A6600797759 /* AutoGenStrings.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; name = AutoGenStrings.py; path = Script/AutoGenStrings.py; sourceTree = "<group>"; };
 		679CB5904033016310946F84 /* Pods_foodlabTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_foodlabTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D2816F9558D935D0D5B0F24 /* Pods-foodlabTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-foodlabTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-foodlabTests/Pods-foodlabTests.debug.xcconfig"; sourceTree = "<group>"; };
 		771F77BC5DCC60B961EC7612 /* Pods_foodlab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_foodlab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,11 +145,11 @@
 		5407D2A31F76BF0800A425FC /* foodlab */ = {
 			isa = PBXGroup;
 			children = (
+				548272141F854A1700797759 /* Script */,
 				5440EBB81F7D558A0084751C /* LaunchScreen */,
 				5407D33A1F77CF5D00A425FC /* Base */,
 				5407D3141F77856200A425FC /* Common */,
 				5407D3121F7781F900A425FC /* Localization */,
-				5407D2A41F76BF0800A425FC /* AppDelegate.swift */,
 				5407D2AB1F76BF0800A425FC /* Assets.xcassets */,
 				5407D2B01F76BF0800A425FC /* Info.plist */,
 				5407D2D41F76D41200A425FC /* FLMainViewController.swift */,
@@ -187,6 +189,7 @@
 		5407D3141F77856200A425FC /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5407D2A41F76BF0800A425FC /* AppDelegate.swift */,
 				5407D33F1F77E86800A425FC /* LMCPopoverMenuView.swift */,
 				5407D3151F77866100A425FC /* FLConstant.swift */,
 				5407D33B1F77D7C600A425FC /* UIImage+Category.swift */,
@@ -207,6 +210,14 @@
 				548271ED1F7D56F800797759 /* LaunchScreen.storyboard */,
 			);
 			name = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		548272141F854A1700797759 /* Script */ = {
+			isa = PBXGroup;
+			children = (
+				548272151F854A6600797759 /* AutoGenStrings.py */,
+			);
+			name = Script;
 			sourceTree = "<group>";
 		};
 		615AB1C9AE07402B84D28B45 /* Pods */ = {
@@ -235,6 +246,7 @@
 				5407D29F1F76BF0800A425FC /* Resources */,
 				D90909E493E680FD2DF635B7 /* [CP] Embed Pods Frameworks */,
 				1AA038CB1146D0A8634787E2 /* [CP] Copy Pods Resources */,
+				548272171F854B6200797759 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -347,6 +359,7 @@
 				548271EB1F7D56F800797759 /* LaunchScreen.storyboard in Resources */,
 				5440EBC01F7D56030084751C /* InfoPlist.strings in Resources */,
 				5440EBBB1F7D55DD0084751C /* Localizable.strings in Resources */,
+				548272161F854A6600797759 /* AutoGenStrings.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +424,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-foodlabTests/Pods-foodlabTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		548272171F854B6200797759 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "python ${SRCROOT}/${TARGET_NAME}/Script/AutoGenStrings.py ${SRCROOT}/${TARGET_NAME}";
 		};
 		741EC5244E1C6D4EDCB12B71 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -577,9 +603,9 @@
 			isa = PBXVariantGroup;
 			children = (
 				548271EC1F7D56F800797759 /* Base */,
-				548271EF1F7D56FC00797759 /* zh-Hans */,
-				548271F11F7D56FF00797759 /* en */,
-				548271F51F7D582500797759 /* ja */,
+				5482720D1F853DFD00797759 /* en */,
+				5482720F1F853E0100797759 /* zh-Hans */,
+				548272131F853E6900797759 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
 			path = LaunchScreen;

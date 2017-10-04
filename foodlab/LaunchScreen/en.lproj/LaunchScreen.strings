@@ -2,5 +2,15 @@
 /* Class = "UILabel"; text = "foodlab"; ObjectID = "GJd-Yh-RWb"; */
 "GJd-Yh-RWb.text" = "foodlab";
 
+/* Class = "UILabel"; text = "Label"; ObjectID = "dfw-j4-Ae5"; */
+//"dfw-j4-Ae5.text" = "Label";
+
 /* Class = "UILabel"; text = "  Copyright © 2017年 LiuMingchuan. All rights reserved."; ObjectID = "obG-Y5-kRd"; */
 "obG-Y5-kRd.text" = "  Copyright © 2017年 LiuMingchuan. All rights reserved.";
+
+//##################################################################################
+//#           AutoGenStrings            2017-10-05 02:07:08
+//##################################################################################
+
+/* Class = "UILabel"; text = "TestData"; ObjectID = "p1N-Rn-p7d"; */
+"p1N-Rn-p7d.text" = "TestData";
